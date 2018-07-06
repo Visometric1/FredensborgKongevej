@@ -1,0 +1,662 @@
+﻿<krpano version="1.19" title="Fredensborg Tour">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               webvr="true"
+	               webvr_gyro_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE|KEEPVIEW"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57" title="Exterior - sides" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_23_48_57.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="176.677" atv="5.811" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_25_22_52" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="1.848" atv="2.019" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_45_50_52" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-45.889" atv="0.586" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_28_39_93" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="46.404" atv="1.012" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_35_19_32" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52" title="Exterior - barns" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_25_22_52.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-56.742" atv="1.260" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_27_14_16" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="59.836" atv="1.708" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_37_09_51" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="3.145" atv="6.115" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_23_48_57" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16" title="Barn left" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_27_14_16.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="178.894" atv="5.655" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_25_22_52" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93" title="Facade N" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_28_39_93.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="45.260" atv="0.773" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_23_48_57" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-50.422" atv="0.163" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_32_15_93" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93" title="Facade E" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_32_15_93.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="1.149" atv="1.528" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_49_06_25" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="41.098" atv="1.760" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_28_39_93" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-41.568" atv="0.643" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_35_19_32" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32" title="Facade S" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_35_19_32.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="43.540" atv="1.044" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_32_15_93" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-44.243" atv="1.277" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_23_48_57" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51" title="Barn right 1" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_37_09_51.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="7.904" atv="4.760" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_42_50_46" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="163.274" atv="7.150" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_25_22_52" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46" title="Barn right 2" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_42_50_46.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="7.268" atv="8.767" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_37_09_51" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-2.210" atv="0.947" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_25_22_52" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52" title="Entre" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-0.828" vlookat="10.715" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_45_50_52.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-63.342" atv="8.147" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_50_46_94" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="62.968" atv="9.286" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_47_49_08" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.734" atv="35.582" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_22_01_72" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-179.959" atv="9.710" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_23_48_57" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08" title="Living room 1" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_47_49_08.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="43.323" atv="7.767" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_45_50_52" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="125.581" atv="3.717" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_49_06_25" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-148.463" atv="8.039" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_48_09_16" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25" title="Kitchen" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_49_06_25.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-179.324" atv="6.076" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_32_15_93" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="61.472" atv="5.711" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_50_46_94" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-55.969" atv="3.777" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_47_49_08" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-83.281" atv="3.776" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_48_09_16" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94" title="Living room 2" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_50_46_94.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-37.481" atv="8.555" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_45_50_52" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-125.398" atv="1.382" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_49_06_25" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="141.513" atv="9.489" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_55_23_83" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="21.751" atv="5.671" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_52_39_45" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45" title="Kids room 1" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_52_39_45.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="20.836" atv="6.237" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_54_02_22" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-156.799" atv="12.412" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_50_46_94" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22" title="Kids bathroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_54_02_22.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-156.141" atv="21.072" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_55_23_83" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="48.865" atv="21.583" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_52_39_45" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83" title="Kids room 2" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_12_55_23_83.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-18.643" atv="8.254" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_54_02_22" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16" title="Master bedroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_48_09_16.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="27.975" atv="4.583" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_47_49_08" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-77.869" atv="5.488" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_50_00_46" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-32.273" atv="-14.119" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_51_51_63" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-46.856" atv="24.996" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_27_06_79" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46" title="Master bathroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_50_00_46.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="149.200" atv="20.089" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_48_09_16" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63" title="Christina`s walk-in" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_13_51_51_63.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="93.105" atv="49.051" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_48_09_16" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46" title="Playroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_15_44_46.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="18.923" atv="3.843" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_17_06_09" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-3.958" atv="3.764" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_22_01_72" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09" title="Cornelius`s bathroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_17_06_09.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="149.433" atv="18.817" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_18_17_78" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="49.416" atv="25.530" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_15_44_46" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78" title="Cornelius`s walk-in" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_18_17_78.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="130.039" atv="27.831" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_17_06_09" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-140.861" atv="16.776" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_29_26_47" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72" title="Wine room" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_22_01_72.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="57.657" atv="9.100" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_23_26_57" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="121.687" atv="10.569" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_29_26_47" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-87.362" atv="16.545" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_15_44_46" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="179.205" atv="-18.832" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_12_45_50_52" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57" title="Bryggers 1" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_23_26_57.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-36.074" atv="11.691" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_24_37_53" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.178" atv="6.861" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_22_01_72" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53" title="Bryggers 2" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_24_37_53.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-88.653" atv="28.173" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_27_06_79" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-44.996" atv="8.223" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_23_26_57" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79" title="Brian`s walk-in" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_27_06_79.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="55.104" atv="13.042" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_13_48_09_16" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-92.378" atv="18.049" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_24_37_53" />
+
+	</scene>
+
+	<scene name="scene_Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47" title="Cornelius`s bedroom" onstart="" thumburl="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/Unreal_Engine_Demo_360-Stereo_2018_07_06_-_14_29_26_47.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="95.869" atv="13.152" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_22_01_72" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="41.346" atv="15.538" linkedscene="scene_unreal_engine_demo_360-stereo_2018_07_06_-_14_18_17_78" />
+
+	</scene>
+
+
+</krpano>
